@@ -53,8 +53,8 @@
   },
   "dependencies": {
     "@finsweet/ts-utils": "^0.40.0",
+    "axios": "^1.6.2",
     "chart.js": "^4.4.1"
-    
   },
   "engines": {
     "pnpm": ">=8"
