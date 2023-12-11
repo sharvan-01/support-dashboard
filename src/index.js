@@ -17179,6 +17179,7 @@
               {
                 label: false,
                 borderWidth: 2,
+                pointRadius: 3,
                 data: value,
                 fill: {
                   target: "origin",
@@ -17247,6 +17248,7 @@
             datasets: [
               {
                 label: "",
+                pointRadius: 3,
                 data: value,
                 fill: {
                   target: "origin",
@@ -17267,7 +17269,14 @@
                 display: false
               },
               y: {
-                display: false
+                display: false,
+                ticks: {
+                  // maxTicksLimit: 6,
+                  family: "Chromatica",
+                  beginAtZero: true,
+                  stepSize: 30,
+                  max: 100
+                }
               }
             },
             plugins: {
@@ -17286,6 +17295,7 @@
             datasets: [
               {
                 label: "",
+                pointRadius: 3,
                 data: value,
                 fill: {
                   target: "origin",

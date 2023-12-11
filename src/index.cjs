@@ -362,7 +362,7 @@ async function chart4(label, value) {
         {
           label: false,
           borderWidth: 2,
-
+          pointRadius: 3,
           data: value,
           fill: {
             target: 'origin',
@@ -433,6 +433,7 @@ async function chart5(label, value) {
       datasets: [
         {
           label: '',
+          pointRadius: 3,
           data: value,
           fill: {
             target: 'origin',
@@ -455,6 +456,13 @@ async function chart5(label, value) {
         },
         y: {
           display: false,
+          ticks: {
+            // maxTicksLimit: 6,
+            family: 'Chromatica',
+            beginAtZero: true,
+            stepSize: 30,
+            max: 100,
+          },
         },
       },
       plugins: {
@@ -474,6 +482,7 @@ async function chart6(label, value) {
       datasets: [
         {
           label: '',
+          pointRadius: 3,
           data: value,
           fill: {
             target: 'origin',
