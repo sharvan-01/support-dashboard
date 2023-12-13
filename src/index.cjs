@@ -67,22 +67,16 @@ async function formatData(object) {
   });
   return;
 }
-
-var data = {};
-var fcrLabels = [];
-var fcrValues = [];
-var ctx = document.getElementById('mfrt').getContext('2d');
-var gradient = ctx.createLinearGradient(0, 0, 0, 400);
-gradient.addColorStop(0, 'rgba(87,14,64,1)');
-gradient.addColorStop(1, 'rgba(188,158,177,0.3)');
-var gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
-gradient2.addColorStop(0, 'rgba(87,14,64,1)');
-gradient2.addColorStop(1, 'rgba(188,158,177,0)');
-createData();
-
 // https://uploads-ssl.webflow.com/63413ad4dec8a91fe53f4fb0/63413ad4dec8a930443f4fd3_Chromatica-Regular.woff2
 
 async function chart1(label, value) {
+  var ctx = document.getElementById('mfrt').getContext('2d');
+  gradient = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient.addColorStop(1, 'rgba(188,158,177,0.3)');
+  gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient2.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient2.addColorStop(1, 'rgba(188,158,177,0)');
   new Chart(document.getElementById('mfrt'), {
     type: 'line',
     data: {
@@ -174,6 +168,13 @@ async function chart1(label, value) {
 }
 
 async function chart2(label, value) {
+  var ctx = document.getElementById('csat').getContext('2d');
+  gradient = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient.addColorStop(1, 'rgba(188,158,177,0.3)');
+  gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient2.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient2.addColorStop(1, 'rgba(188,158,177,0)');
   new Chart(document.getElementById('csat'), {
     type: 'line',
     data: {
@@ -263,6 +264,13 @@ async function chart2(label, value) {
   });
 }
 async function chart3(label, value) {
+  var ctx = document.getElementById('fcr').getContext('2d');
+  gradient = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient.addColorStop(1, 'rgba(188,158,177,0.3)');
+  gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient2.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient2.addColorStop(1, 'rgba(188,158,177,0)');
   new Chart(document.getElementById('fcr'), {
     type: 'line',
     data: {
@@ -354,6 +362,13 @@ async function chart3(label, value) {
 }
 
 async function chart4(label, value) {
+  var ctx = document.getElementById('mfrt').getContext('2d');
+  gradient = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient.addColorStop(1, 'rgba(188,158,177,0.3)');
+  gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient2.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient2.addColorStop(1, 'rgba(188,158,177,0)');
   new Chart(document.getElementById('mfrt-hero'), {
     type: 'line',
     data: {
@@ -426,6 +441,13 @@ async function chart4(label, value) {
 }
 
 async function chart5(label, value) {
+  var ctx = document.getElementById('csat').getContext('2d');
+  gradient = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient.addColorStop(1, 'rgba(188,158,177,0.3)');
+  gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient2.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient2.addColorStop(1, 'rgba(188,158,177,0)');
   new Chart(document.getElementById('csat-hero'), {
     type: 'line',
     data: {
@@ -475,6 +497,13 @@ async function chart5(label, value) {
 }
 
 async function chart6(label, value) {
+  var ctx = document.getElementById('fcr').getContext('2d');
+  gradient = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient.addColorStop(1, 'rgba(188,158,177,0.3)');
+  gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient2.addColorStop(0, 'rgba(87,14,64,1)');
+  gradient2.addColorStop(1, 'rgba(188,158,177,0)');
   new Chart(document.getElementById('fcr-hero'), {
     type: 'line',
     data: {
@@ -522,3 +551,12 @@ async function chart6(label, value) {
     },
   });
 }
+
+var data = {};
+var fcrLabels = [];
+var fcrValues = [];
+var gradient, gradient2;
+//error here is that maybe we cannot create the gradient without creating the chart first
+$(document).ready(function () {
+  createData();
+});

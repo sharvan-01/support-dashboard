@@ -16893,18 +16893,14 @@
         });
         return;
       }
-      var data = {};
-      var fcrLabels = [];
-      var fcrValues = [];
-      var ctx = document.getElementById("mfrt").getContext("2d");
-      var gradient = ctx.createLinearGradient(0, 0, 0, 400);
-      gradient.addColorStop(0, "rgba(87,14,64,1)");
-      gradient.addColorStop(1, "rgba(188,158,177,0.3)");
-      var gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
-      gradient2.addColorStop(0, "rgba(87,14,64,1)");
-      gradient2.addColorStop(1, "rgba(188,158,177,0)");
-      createData();
       async function chart1(label, value) {
+        var ctx = document.getElementById("mfrt").getContext("2d");
+        gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(87,14,64,1)");
+        gradient.addColorStop(1, "rgba(188,158,177,0.3)");
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient2.addColorStop(0, "rgba(87,14,64,1)");
+        gradient2.addColorStop(1, "rgba(188,158,177,0)");
         new auto_default(document.getElementById("mfrt"), {
           type: "line",
           data: {
@@ -16994,6 +16990,13 @@
         });
       }
       async function chart2(label, value) {
+        var ctx = document.getElementById("csat").getContext("2d");
+        gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(87,14,64,1)");
+        gradient.addColorStop(1, "rgba(188,158,177,0.3)");
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient2.addColorStop(0, "rgba(87,14,64,1)");
+        gradient2.addColorStop(1, "rgba(188,158,177,0)");
         new auto_default(document.getElementById("csat"), {
           type: "line",
           data: {
@@ -17082,6 +17085,13 @@
         });
       }
       async function chart3(label, value) {
+        var ctx = document.getElementById("fcr").getContext("2d");
+        gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(87,14,64,1)");
+        gradient.addColorStop(1, "rgba(188,158,177,0.3)");
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient2.addColorStop(0, "rgba(87,14,64,1)");
+        gradient2.addColorStop(1, "rgba(188,158,177,0)");
         new auto_default(document.getElementById("fcr"), {
           type: "line",
           data: {
@@ -17171,6 +17181,13 @@
         });
       }
       async function chart4(label, value) {
+        var ctx = document.getElementById("mfrt").getContext("2d");
+        gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(87,14,64,1)");
+        gradient.addColorStop(1, "rgba(188,158,177,0.3)");
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient2.addColorStop(0, "rgba(87,14,64,1)");
+        gradient2.addColorStop(1, "rgba(188,158,177,0)");
         new auto_default(document.getElementById("mfrt-hero"), {
           type: "line",
           data: {
@@ -17241,6 +17258,13 @@
         });
       }
       async function chart5(label, value) {
+        var ctx = document.getElementById("csat").getContext("2d");
+        gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(87,14,64,1)");
+        gradient.addColorStop(1, "rgba(188,158,177,0.3)");
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient2.addColorStop(0, "rgba(87,14,64,1)");
+        gradient2.addColorStop(1, "rgba(188,158,177,0)");
         new auto_default(document.getElementById("csat-hero"), {
           type: "line",
           data: {
@@ -17288,6 +17312,13 @@
         });
       }
       async function chart6(label, value) {
+        var ctx = document.getElementById("fcr").getContext("2d");
+        gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(87,14,64,1)");
+        gradient.addColorStop(1, "rgba(188,158,177,0.3)");
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient2.addColorStop(0, "rgba(87,14,64,1)");
+        gradient2.addColorStop(1, "rgba(188,158,177,0)");
         new auto_default(document.getElementById("fcr-hero"), {
           type: "line",
           data: {
@@ -17333,6 +17364,14 @@
           }
         });
       }
+      var data = {};
+      var fcrLabels = [];
+      var fcrValues = [];
+      var gradient;
+      var gradient2;
+      $(document).ready(function() {
+        createData();
+      });
     }
   });
   require_src();
