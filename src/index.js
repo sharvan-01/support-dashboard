@@ -17369,9 +17369,7 @@
       var fcrValues = [];
       var gradient;
       var gradient2;
-      $(document).ready(function() {
-        createData();
-      });
+      createData();
     }
   });
   require_src();

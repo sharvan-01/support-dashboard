@@ -557,6 +557,5 @@ var fcrLabels = [];
 var fcrValues = [];
 var gradient, gradient2;
 //error here is that maybe we cannot create the gradient without creating the chart first
-$(document).ready(function () {
-  createData();
-});
+
+createData();
